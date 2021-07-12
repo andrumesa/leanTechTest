@@ -1,0 +1,46 @@
+DROP TABLE IF EXISTS person;
+
+CREATE TABLE PERSON (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  last_name VARCHAR(250) NOT NULL,
+  cell_phone VARCHAR(20) DEFAULT NULL,
+  address VARCHAR(50) DEFAULT NULL,
+  city_name VARCHAR(50) DEFAULT NULL
+);
+
+INSERT INTO PERSON (name, last_name, cell_phone,address,city_name) VALUES
+  ('Aliko', 'Dangote', '(170) 3112145445','CL 23 10 25','Bogotá'),
+  ('Bill', 'Gates', '(168) 3112145423','CL 2 10 25','Lima'),
+  ('Elon', 'Musk', '(168) 23232332323','CL 2 10 25','Medellin');
+
+  
+  DROP TABLE IF EXISTS POSITION;
+
+CREATE TABLE POSITION (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(50) NOT NULL
+);
+
+INSERT INTO POSITION (name) VALUES
+  ('SENIOR FRONT END'),
+  ('JUNIOR DEV OPS' ),
+  ('SENIOR BACK END');
+
+DROP TABLE IF EXISTS EMPLOYEE;
+
+CREATE TABLE EMPLOYEE (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  person INT NOT NULL,
+  position INT NOT NULL,
+  salary INT DEFAULT 0
+);
+
+INSERT INTO EMPLOYEE ( person, position,salary) VALUES
+  (1, 1,10000000 ),
+  (2, 2,12000000 ),
+  (3, 3,9000000 );
+
+  
+  
+  
